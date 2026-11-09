@@ -1,0 +1,834 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="dark" />
+    <meta name="theme-color" content="#171717" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23171717'/%3E%3Cpath d='M16 7v18M7 16h18M9.7 9.7l12.6 12.6M22.3 9.7L9.7 22.3' stroke='%23fafafa' stroke-width='1.6' stroke-linecap='round'/%3E%3C/svg%3E"
+    />
+    <title>Sharing Session — Kemenkoan AKN</title>
+    <meta
+      name="description"
+      content="Sharing Session Kemenkoan AKN — About Us, Penyimpanan File, Pembuatan Surat, dan LPJ Kegiatan."
+    />
+    <script>
+      document.documentElement.classList.add('js')
+    </script>
+  </head>
+  <body>
+    <div class="grain" aria-hidden="true"></div>
+
+    <header class="topbar">
+      <a class="brand" href="#cover" data-goto="cover" aria-label="Kembali ke cover">
+        <span class="brand__mark" aria-hidden="true">✳</span>
+        <span class="brand__text">Kemenkoan <b>AKN</b></span>
+      </a>
+      <div class="topbar__right">
+        <span class="topbar__chapter" data-chapter>Cover</span>
+        <span class="topbar__keys"><kbd>←</kbd><kbd>→</kbd></span>
+      </div>
+    </header>
+
+    <div class="rail" aria-label="Navigasi bab">
+      <ol class="rail__list" data-rail></ol>
+    </div>
+
+    <div class="progress" aria-hidden="true"><span class="progress__fill" data-progress></span></div>
+
+    <div class="counter" aria-hidden="true">
+      <span class="counter__now" data-counter>01</span>
+      <span class="counter__sep">/</span>
+      <span class="counter__all">08</span>
+    </div>
+
+    <div class="cursor" aria-hidden="true">
+      <span class="cursor__ring"><span class="cursor__label" data-cursor-label></span></span>
+      <span class="cursor__dot"></span>
+    </div>
+
+    <div class="overview" data-overview hidden>
+      <div class="overview__panel">
+        <header class="overview__head">
+          <p class="micro">Lompat ke bab</p>
+          <button class="overview__close" type="button" data-overview-close>
+            Tutup <kbd>Esc</kbd>
+          </button>
+        </header>
+        <ol class="overview__list" data-overview-list></ol>
+      </div>
+    </div>
+
+    <main class="deck" id="deck">
+      <!-- 01 — COVER -->
+      <section
+        id="cover"
+        class="scene scene--cover"
+        data-scene
+        data-label="Cover"
+        aria-labelledby="cover-title"
+      >
+        <div class="cover__media">
+          <div class="cover__imgwrap" data-media>
+            <img
+              src="./src/assets/img/hero.jpg"
+              alt="Peserta rapat mencatat di meja kayu panjang"
+              data-parallax
+              data-speed="7"
+              fetchpriority="high"
+            />
+          </div>
+          <p class="cover__caption micro">FIG. 00 — NOTULENSI</p>
+        </div>
+
+        <div class="cover__panel">
+          <span class="cover__word" aria-hidden="true">ADMINISTRASI</span>
+
+          <div class="cover__top">
+            <p class="eyebrow" data-reveal>Sharing Session</p>
+            <h1 class="display cover__title" id="cover-title">
+              <span class="line"><span>Kemenkoan</span></span>
+              <span class="line"><span><em>AKN</em><span class="dot">.</span></span></span>
+            </h1>
+          </div>
+
+          <div class="cover__meta" data-reveal>
+            <p class="micro">Disampaikan oleh</p>
+            <ul class="people">
+              <li class="people__row">
+                <span class="people__name">Adrian</span>
+                <span class="people__role">Menteri Administrasi</span>
+              </li>
+              <li class="people__row">
+                <span class="people__name">Yoga</span>
+                <span class="people__role">Wakil Menteri Administrasi</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="cover__foot">
+            <a class="cta" href="#contents" data-goto="contents" data-magnetic data-cursor="Lanjut">
+              <span class="cta__label">Mulai</span>
+              <span class="cta__icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    d="M5 12h14M13 6l6 6-6 6"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </span>
+            </a>
+            <p class="hint" data-reveal>atau tekan <kbd>→</kbd></p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 02 — DAFTAR ISI -->
+      <section
+        id="contents"
+        class="scene scene--contents"
+        data-scene
+        data-label="Daftar Isi"
+        aria-labelledby="contents-title"
+      >
+        <header class="scene__head">
+          <p class="eyebrow" data-reveal>Daftar Isi</p>
+          <span class="scene__index" aria-hidden="true">02</span>
+        </header>
+
+        <div class="contents__grid">
+          <h2 class="display display--md" id="contents-title">
+            <span class="line"><span>Empat hal</span></span>
+            <span class="line"><span>yang perlu <em>diingat</em>.</span></span>
+          </h2>
+
+          <ol class="toc" data-stagger>
+            <li>
+              <a
+                class="toc__row"
+                href="#about"
+                data-goto="about"
+              >
+                <span class="toc__num">01</span>
+                <span class="toc__main">
+                  <span class="toc__title">About Us</span>
+                  <span class="toc__desc">Tugas &amp; tanggung jawab</span>
+                </span>
+                <span class="toc__icon">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path
+                      d="M7 17L17 7M9 7h8v8"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.4"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </span>
+              </a>
+            </li>
+            <li>
+              <a
+                class="toc__row"
+                href="#files"
+                data-goto="files"
+              >
+                <span class="toc__num">02</span>
+                <span class="toc__main">
+                  <span class="toc__title">Penyimpanan File</span>
+                  <span class="toc__desc">Surat keluar/masuk &amp; struktur folder</span>
+                </span>
+                <span class="toc__icon">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path
+                      d="M7 17L17 7M9 7h8v8"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.4"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </span>
+              </a>
+            </li>
+            <li>
+              <a
+                class="toc__row"
+                href="#letters"
+                data-goto="letters"
+              >
+                <span class="toc__num">03</span>
+                <span class="toc__main">
+                  <span class="toc__title">Pembuatan Surat</span>
+                  <span class="toc__desc">Surat &amp; tanda tangan</span>
+                </span>
+                <span class="toc__icon">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path
+                      d="M7 17L17 7M9 7h8v8"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.4"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </span>
+              </a>
+            </li>
+            <li>
+              <a
+                class="toc__row"
+                href="#lpj"
+                data-goto="lpj"
+              >
+                <span class="toc__num">04</span>
+                <span class="toc__main">
+                  <span class="toc__title">LPJ Kegiatan</span>
+                  <span class="toc__desc">Pembuatan, isi, dan tenggat</span>
+                </span>
+                <span class="toc__icon">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path
+                      d="M7 17L17 7M9 7h8v8"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.4"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </span>
+              </a>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- 03 — ABOUT US -->
+      <section
+        id="about"
+        class="scene scene--about"
+        data-scene
+        data-label="About Us"
+        aria-labelledby="about-title"
+      >
+        <header class="scene__head">
+          <p class="eyebrow" data-reveal>Bab 01 — About Us</p>
+          <span class="scene__index" aria-hidden="true">03</span>
+        </header>
+
+        <div class="about__grid">
+          <div class="about__copy">
+            <h2 class="display display--lg" id="about-title">
+              <span class="line"><span>Menjadi</span></span>
+              <span class="line"><span>sekretaris</span></span>
+              <span class="line"><span>yang <em>baik</em>.</span></span>
+            </h2>
+
+            <p class="lead" data-reveal>Di dalam kepanitiaan, maupun kabinet.</p>
+            <p class="body" data-reveal>
+              Administrasi memegang alur dokumen: surat masuk dan keluar, arsip tiap sie, sampai
+              laporan pertanggungjawaban. Kalau alurnya rapi, kerja panitia lain ikut ringan.
+            </p>
+
+            <dl class="facts" data-stagger>
+              <div class="facts__row">
+                <dt>Tugas &amp; Tanggung Jawab Administrasi</dt>
+                <dd>Kelola surat dan nomor surat</dd>
+              </div>
+              <div class="facts__row">
+                <dt>Arsip</dt>
+                <dd>Jaga struktur folder kepanitiaan</dd>
+              </div>
+              <div class="facts__row">
+                <dt>Pelaporan</dt>
+                <dd>Susun LPJ bersama tiap sie</dd>
+              </div>
+            </dl>
+          </div>
+
+          <figure class="about__figure">
+            <div class="about__imgwrap" data-media>
+              <img
+                src="./src/assets/img/about.jpg"
+                alt="Tiga orang bekerja bersama di satu meja dengan laptop dan catatan"
+                data-parallax
+                data-speed="5"
+                loading="lazy"
+              />
+            </div>
+            <figcaption class="micro" data-reveal>
+              FIG. 01 — Kerja rapi, kerja bersama.
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- 04 — PENYIMPANAN FILE -->
+      <section
+        id="files"
+        class="scene scene--files"
+        data-scene
+        data-label="Penyimpanan File"
+        aria-labelledby="files-title"
+      >
+        <header class="scene__head">
+          <p class="eyebrow" data-reveal>Bab 02 — Penyimpanan File</p>
+          <span class="scene__index" aria-hidden="true">04</span>
+        </header>
+
+        <div class="files__grid">
+          <div class="files__copy">
+            <h2 class="display display--md" id="files-title">
+              <span class="line"><span>Rapi itu</span></span>
+              <span class="line"><span>soal <em>nama folder</em>.</span></span>
+            </h2>
+
+            <ol class="steps" data-stagger>
+              <li class="step">
+                <span class="step__num">1</span>
+                <div class="step__body">
+                  <h3 class="step__title">Pisahkan surat keluar &amp; masuk</h3>
+                  <p class="step__text">
+                    Dua folder berbeda. Nomor surat punya foldernya sendiri supaya penomoran
+                    tidak bentrok dan mudah dilacak.
+                  </p>
+                </div>
+              </li>
+              <li class="step">
+                <span class="step__num">2</span>
+                <div class="step__body">
+                  <h3 class="step__title">Satu kepanitiaan, satu folder</h3>
+                  <p class="step__text">
+                    Buat folder nama kegiatan dulu, baru pecah per peran: sekretaris, bendahara,
+                    dan progress tiap sie.
+                  </p>
+                </div>
+              </li>
+              <li class="step">
+                <span class="step__num">3</span>
+                <div class="step__body">
+                  <h3 class="step__title">Jangan ada file nyasar</h3>
+                  <p class="step__text">
+                    Semua dokumen masuk struktur ini — bukan di chat, bukan di Downloads.
+                    Satu sumber, semua orang tahu ke mana mencari.
+                  </p>
+                </div>
+              </li>
+            </ol>
+          </div>
+
+                    <div class="files__mock">
+            <article class="ftree-card">
+              <header class="ftree-card__bar">
+                <span class="micro">Struktur folder</span>
+                <span class="ftree-card__note">akar &rarr; kegiatan &rarr; peran</span>
+              </header>
+
+              <ul class="ftree" data-stagger>
+                <li class="ftree__node">
+                  <div class="ftree__row">
+                    <span class="ftree__icon" aria-hidden="true"></span>
+                    <span class="ftree__name">ADMINISTRASI NEGARA</span>
+                    <span class="ftree__tag">arsip kabinet</span>
+                  </div>
+                  <ul class="ftree__children">
+                    <li class="ftree__node">
+                      <div class="ftree__row">
+                        <span class="ftree__icon" aria-hidden="true"></span>
+                        <span class="ftree__name">SURAT</span>
+                        <span class="ftree__tag">4 subfolder</span>
+                      </div>
+                      <ul class="ftree__children">
+                        <li class="ftree__node">
+                          <div class="ftree__row">
+                            <span class="ftree__icon" aria-hidden="true"></span>
+                            <span class="ftree__name">NOMOR SURAT</span>
+                          </div>
+                        </li>
+                        <li class="ftree__node">
+                          <div class="ftree__row">
+                            <span class="ftree__icon" aria-hidden="true"></span>
+                            <span class="ftree__name">SURAT KELUAR</span>
+                          </div>
+                        </li>
+                        <li class="ftree__node">
+                          <div class="ftree__row">
+                            <span class="ftree__icon" aria-hidden="true"></span>
+                            <span class="ftree__name">SURAT MASUK</span>
+                          </div>
+                        </li>
+                        <li class="ftree__node">
+                          <div class="ftree__row">
+                            <span class="ftree__icon" aria-hidden="true"></span>
+                            <span class="ftree__name">TEMPLATE DAN CONTOH SURAT</span>
+                          </div>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+
+                <li class="ftree__node">
+                  <div class="ftree__row">
+                    <span class="ftree__icon" aria-hidden="true"></span>
+                    <span class="ftree__name">PROGRAM KERJA</span>
+                    <span class="ftree__tag">arsip program</span>
+                  </div>
+                  <ul class="ftree__children">
+                    <li class="ftree__node">
+                      <div class="ftree__row">
+                        <span class="ftree__icon" aria-hidden="true"></span>
+                        <span class="ftree__name">PKKMB 2026</span>
+                        <span class="ftree__tag">nama kegiatan</span>
+                      </div>
+                      <ul class="ftree__children">
+                        <li class="ftree__node">
+                          <div class="ftree__row">
+                            <span class="ftree__icon" aria-hidden="true"></span>
+                            <span class="ftree__name">SEKRETARIS</span>
+                            <span class="ftree__tag">surat &middot; LPJ &middot; absen</span>
+                          </div>
+                        </li>
+                        <li class="ftree__node">
+                          <div class="ftree__row">
+                            <span class="ftree__icon" aria-hidden="true"></span>
+                            <span class="ftree__name">BENDAHARA</span>
+                            <span class="ftree__tag">rab &middot; nota</span>
+                          </div>
+                        </li>
+                        <li class="ftree__node">
+                          <div class="ftree__row">
+                            <span class="ftree__icon" aria-hidden="true"></span>
+                            <span class="ftree__name">PROGRESS PER SIE</span>
+                            <span class="ftree__tag">laporan tiap sie</span>
+                          </div>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+
+              <footer class="ftree-card__foot">
+                <span>Satu folder, satu jenis dokumen.</span>
+                <span>Tidak ada file di luar akar.</span>
+              </footer>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- 05 — PEMBUATAN SURAT -->
+      <section
+        id="letters"
+        class="scene scene--letters"
+        data-scene
+        data-label="Pembuatan Surat"
+        aria-labelledby="letters-title"
+      >
+        <header class="scene__head">
+          <p class="eyebrow" data-reveal>Bab 03 — Pembuatan Surat</p>
+          <span class="scene__index" aria-hidden="true">05</span>
+        </header>
+
+        <div class="letters__grid">
+                    <figure class="letter" data-media>
+            <div class="letter__kop">
+              <span class="letter__wordmark">INSTIKI</span>
+              <span class="letter__org">
+                <b>INSTITUT BISNIS DAN TEKNOLOGI INDONESIA</b>
+                <small>Jl. Tukad Pakerisan No. 97, Panjer, Denpasar Selatan</small>
+              </span>
+            </div>
+            <span class="letter__rule"></span>
+
+            <p class="letter__place">Denpasar, 3 September 2025</p>
+
+            <dl class="letter__fields">
+              <div><dt>Nomor</dt><dd>001/PKKMB-INSTIKI/SPp.05/09/2025</dd></div>
+              <div><dt>Lampiran</dt><dd>1 (Satu) Berkas</dd></div>
+              <div><dt>Perihal</dt><dd>Surat Peminjaman Prasarana</dd></div>
+            </dl>
+
+            <p class="letter__to">
+              Yth. Wakil Rektor II<br />Bidang Sarana dan Prasarana<br /><span>di Tempat</span>
+            </p>
+
+            <p class="letter__body">
+              Dengan hormat, sehubungan dengan pelaksanaan PKKMB INSTIKI 2025, kami selaku
+              panitia pelaksana mengajukan peminjaman prasarana untuk kegiatan yang akan
+              berlangsung pada:
+            </p>
+
+            <ul class="letter__details">
+              <li><span>Hari/tanggal</span><b>18&ndash;28 September 2025</b></li>
+              <li><span>Waktu</span><b>06.00 WITA &mdash; selesai</b></li>
+              <li><span>Tempat</span><b>Kampus INSTIKI</b></li>
+            </ul>
+
+            <p class="letter__body letter__body--closing">
+              Demikian surat ini kami sampaikan, atas perhatian Bapak/Ibu kami ucapkan terima
+              kasih.
+            </p>
+
+            <div class="letter__signs">
+              <div class="letter__sign">
+                <span class="letter__sign-role">Ketua Panitia</span>
+                <svg class="signature" viewBox="0 0 220 64" aria-hidden="true">
+                  <path
+                    data-signature
+                    d="M6 46c14-26 26 8 38-14s18 4 28-8 12 28 24 10 14-18 24 0 14 6 22-8 18 4 26-6 14 2 20-6"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                <span class="letter__sign-name">I Gusti Ayu Agung Mas Aristamy, S.TI., M.Kom.</span>
+                <span class="letter__sign-id">NIDN. 0802119401</span>
+              </div>
+
+              <div class="letter__sign">
+                <span class="letter__sign-role">Wakil Rektor III</span>
+                <svg class="signature" viewBox="0 0 220 64" aria-hidden="true">
+                  <path
+                    data-signature
+                    d="M4 44c10-22 22 6 34-6s16 18 28 2 16-16 26 2 12 8 22-6 16 8 26-2 16 2 26-8"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                <span class="letter__sign-name">Dr. Ayu Gede Willdahlia, S.E., M.M.</span>
+                <span class="letter__sign-id">NIDN. 0828098102</span>
+              </div>
+            </div>
+          </figure>
+
+          <div class="letters__copy">
+            <h2 class="display display--md" id="letters-title">
+              <span class="line"><span>Surat yang benar,</span></span>
+              <span class="line"><span><em>sekali jadi</em>.</span></span>
+            </h2>
+
+            <div class="defs" data-stagger>
+              <section class="def">
+                <h3 class="def__title">Jenis surat</h3>
+                <ul class="def__list">
+                  <li>Pemberitahuan, peminjaman, permohonan, pernyataan, undangan.</li>
+                  <li>Template dan contoh ada di folder kepanitiaan sebelumnya.</li>
+                  <li>Revisi surat lewat kemahasiswaan.</li>
+                </ul>
+              </section>
+              <section class="def">
+                <h3 class="def__title">Tanda tangan</h3>
+                <ul class="def__list">
+                  <li>Umumnya Ketua Panitia dan Dosen (Wakil Rektor III).</li>
+                  <li>Cantumkan nama dan NIDN/NIM sesuai format.</li>
+                  <li>Cek nomor, lampiran, dan perihal sebelum dikirim.</li>
+                </ul>
+              </section>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 06 — LPJ -->
+      <section
+        id="lpj"
+        class="scene scene--lpj"
+        data-scene
+        data-label="LPJ Kegiatan"
+        aria-labelledby="lpj-title"
+      >
+        <header class="scene__head">
+          <p class="eyebrow" data-reveal>Bab 04 — LPJ Kegiatan</p>
+          <span class="scene__index" aria-hidden="true">06</span>
+        </header>
+
+        <h2 class="display display--md lpj__title" id="lpj-title">
+          <span class="line"><span>LPJ</span></span>
+          <span class="line"><span><em>Kegiatan</em>.</span></span>
+        </h2>
+
+        <div class="lpj__cards" data-stagger>
+          <article class="card">
+            <span class="card__num">01</span>
+            <h3 class="card__title">Pembuatan</h3>
+            <p class="card__text">
+              Dibuat sebagai pelaporan bahwa kegiatan telah berhasil dilaksanakan. Umumnya disimpan
+              di folder kepanitiaan bagian sekretaris.
+            </p>
+            <p class="card__path">~/Kepanitiaan/Sekretaris/LPJ</p>
+          </article>
+
+          <article class="card">
+            <span class="card__num">02</span>
+            <h3 class="card__title">Isi dari LPJ</h3>
+            <ul class="card__list">
+              <li>LPJ Pelaksana</li>
+              <li>LPJ Per Sie</li>
+              <li>Lampiran: nota, absensi, BA, dokumentasi, dll.</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <span class="card__num">03</span>
+            <h3 class="card__title">Tenggat</h3>
+            <p class="card__text">
+              Wajib selesai dan dikirim ke kemahasiswaan maksimal H+7. Paling telat H+14.
+            </p>
+            <div class="timeline" aria-hidden="true">
+              <span class="timeline__line"></span>
+              <span class="timeline__tick timeline__tick--start"><i></i>H+0</span>
+              <span class="timeline__tick timeline__tick--warn"><i></i>H+7</span>
+              <span class="timeline__tick timeline__tick--end"><i></i>H+14</span>
+            </div>
+          </article>
+        </div>
+
+        <div class="lpj__foot">
+          <p class="note" data-reveal>
+            <span class="note__tag">Catatan</span> Dicicil dari awal kegiatan lebih baik.
+          </p>
+          <span class="stamp" data-stamp>
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M5 12.5l4.2 4.2L19 7"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            Target Achieved
+          </span>
+        </div>
+      </section>
+
+      <!-- 07 — RANGKUMAN -->
+      <section
+        id="recap"
+        class="scene scene--recap"
+        data-scene
+        data-label="Rangkuman"
+        aria-labelledby="recap-title"
+      >
+        <header class="scene__head">
+          <p class="eyebrow" data-reveal>Rangkuman</p>
+          <span class="scene__index" aria-hidden="true">07</span>
+        </header>
+
+        <div class="recap__grid">
+          <h2 class="display display--lg" id="recap-title">
+            <span class="line"><span>Sebelum</span></span>
+            <span class="line"><span><em>bubar</em>.</span></span>
+          </h2>
+
+          <ul class="checks" data-stagger>
+            <li class="check">
+              <span class="check__box">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    d="M5 12.5l4.2 4.2L19 7"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </span>
+              <p>Surat masuk dan keluar disimpan terpisah, nomor surat di foldernya sendiri.</p>
+            </li>
+            <li class="check">
+              <span class="check__box">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    d="M5 12.5l4.2 4.2L19 7"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </span>
+              <p>Struktur folder ikut nama kepanitiaan: Sekretaris, Bendahara, Per Sie.</p>
+            </li>
+            <li class="check">
+              <span class="check__box">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    d="M5 12.5l4.2 4.2L19 7"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </span>
+              <p>Pakai template surat dari kepanitiaan sebelumnya, revisi lewat kemahasiswaan.</p>
+            </li>
+            <li class="check">
+              <span class="check__box">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    d="M5 12.5l4.2 4.2L19 7"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </span>
+              <p>Cek format tanda tangan dan siapa yang menandatangani.</p>
+            </li>
+            <li class="check">
+              <span class="check__box">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    d="M5 12.5l4.2 4.2L19 7"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </span>
+              <p>LPJ dicicil dari awal. Kirim maksimal H+7, paling telat H+14.</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- 08 — PENUTUP -->
+      <section
+        id="qa"
+        class="scene scene--qa"
+        data-scene
+        data-label="Penutup"
+        aria-labelledby="qa-title"
+      >
+        <header class="scene__head">
+          <p class="eyebrow" data-reveal>Penutup</p>
+          <span class="scene__index" aria-hidden="true">08</span>
+        </header>
+
+        <div class="qa__body">
+          <h2 class="display display--xl" id="qa-title">
+            <span class="line"><span>Ada</span></span>
+            <span class="line"><span><em>pertanyaan?</em></span></span>
+          </h2>
+          <p class="qa__thanks" data-reveal>
+            Terima kasih — <b>Adrian</b> &amp; <b>Yoga</b>, Kemenkoan AKN.
+          </p>
+          <a
+            class="cta cta--ghost"
+            href="#cover"
+            data-goto="cover"
+            data-magnetic
+            data-cursor="Atas"
+          >
+            <span class="cta__label">Balik ke atas</span>
+            <span class="cta__icon cta__icon--up">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M5 12h14M13 6l6 6-6 6"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </span>
+          </a>
+        </div>
+
+        <div class="marquee" data-marquee aria-hidden="true">
+          <div class="marquee__track" data-marquee-track>
+            <div class="marquee__group" data-marquee-group>
+              <span>Terima kasih</span><i>✳</i><span>Sharing Session</span><i>✳</i>
+              <span>Kemenkoan AKN</span><i>✳</i><span>Terima kasih</span><i>✳</i>
+              <span>Sharing Session</span><i>✳</i><span>Kemenkoan AKN</span><i>✳</i>
+              <span>Terima kasih</span><i>✳</i><span>Sharing Session</span><i>✳</i>
+              <span>Kemenkoan AKN</span><i>✳</i>
+            </div>
+            <div class="marquee__group">
+              <span>Terima kasih</span><i>✳</i><span>Sharing Session</span><i>✳</i>
+              <span>Kemenkoan AKN</span><i>✳</i><span>Terima kasih</span><i>✳</i>
+              <span>Sharing Session</span><i>✳</i><span>Kemenkoan AKN</span><i>✳</i>
+              <span>Terima kasih</span><i>✳</i><span>Sharing Session</span><i>✳</i>
+              <span>Kemenkoan AKN</span><i>✳</i>
+            </div>
+          </div>
+        </div>
+
+        <footer class="qa__foot">
+          <span class="micro">Sharing Session</span>
+          <span class="micro">Kemenkoan AKN</span>
+        </footer>
+      </section>
+    </main>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
